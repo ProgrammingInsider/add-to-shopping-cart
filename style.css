@@ -1,0 +1,267 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #F8F8F8;
+}
+
+/* Header Styles */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: white;
+}
+
+.leftItem{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1em;
+}
+
+.Logo{
+    color: blue;
+    font-weight: 900;
+    font-size: 1.6rem;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+}
+
+.navLink{
+    margin-right: .5em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.navLink:hover{
+    opacity: .5;
+}
+
+.rightItem{
+    position: relative;
+}
+
+.totalItem{
+    color: blue;
+    font-weight: 600;
+    position: absolute;
+    top: -10px;
+    right: -3px;
+    z-index: 100;
+}
+
+/* card styles */
+.itemContainer{
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 7em;
+    margin-bottom: 2em;
+    display: grid;
+    gap: 15px;
+    column-gap: 10px;
+    row-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+   
+}
+
+.card{
+    width: 200px;
+    height: 310px;
+    padding: .5em;
+    background-color:white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 3px rgba(0, 0, 0, .1);
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.cardImg{
+    width: 65%;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardImg img{
+    width: 100%;
+}
+
+.itemDescContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 1em;
+}
+
+.itemName{
+    font-size: 1rem;
+    margin-bottom: .3em;
+}
+
+.itemPrice{
+    font-weight: 500;
+}
+
+.addtocart{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.addtocart:hover{
+    background-color: #dbdbdb;
+}
+
+.cart{
+    margin: 0;
+}
+
+@media screen and (min-width:650px) {
+    .itemContainer{
+        grid-template-columns: 1fr 1fr 1fr;
+    }   
+}
+
+@media screen and (min-width:900px) {
+    .itemContainer{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }   
+}
+
+@media screen and (min-width:1100px) {
+    .itemContainer{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }   
+}
+
+/* Shopping Cart List */
+.cartContainer{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    max-width: 500px;
+    z-index: 1000;
+    background-color: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    transition: all .5s ease-in-out;
+}
+
+.showCartContainer{
+    width: 80%;
+    padding: 1em;
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, .4);
+}
+
+.closeCart{
+    text-align: right;
+    margin-bottom: 1em;
+    cursor: pointer;
+    font-size: 1.1rem;
+    width: 50px;
+    float: right;
+    border-bottom: 2px solid black;
+}
+
+#cartTitle{
+    font-size: 1.5rem;
+    color: blue;
+    font-weight: 900;
+}
+
+.eachCart{
+    width: 97%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
+    gap: 5px;
+    background-color: white;
+    margin: .5em;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, .1);
+    height: 110px;
+    padding: .5em;
+}
+
+.cartImg{
+    width: 100%;
+}
+
+.cartItemName{
+    font-size: 1rem;
+}
+
+.cartItemPrice{
+    font-weight: 500;
+}
+
+.cartDesc{
+    margin-left: 2em;
+}
+
+.remove{
+    border: none;
+    background-color: blue;
+    padding: .5em;
+    font-size: .9rem;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: .3em;
+    cursor: pointer;
+    border: 2px solid blue;
+    transition: all .2s ease-in-out;
+}
+
+.remove:hover{
+    color: black;
+    border: 2px solid blue;
+    background-color: transparent;
+}
+
+#totalPriceContainer{
+    background-color: blue;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    color: white;
+    border-radius: 10px;
+}
+
+#totalPrice{
+    font-weight: 900;
+}

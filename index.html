@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to shopping cart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/aa7454d09f.js" crossorigin="anonymous"></script>
+    <script src="./script.js" type="module"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="leftItem">
+            <h1 class="Logo">Shopi</h1>
+            <nav class="nav">
+                <li class="navLink">Home</li>
+                <li class="navLink">About</li>
+                <li class="navLink">Purchase</li>
+                <li class="navLink">Pages</li>
+            </nav>
+        </div>
+
+        <div class="rightItem" id="shoppingCart">
+            <span class="totalItem" id="totalItem"></span>
+            <i class="fa-solid fa-cart-shopping navLink"></i>
+        </div>
+    </header>
+    
+
+    <!-- Item Cards -->
+    <div class="itemContainer" id="itemContainer"></div>  
+    
+    <div class="cartContainer" id="cartContainer">
+        <div id="closeCart">
+            <h3 class="closeCart">Close</h3>
+        </div>
+        <h1 id="cartTitle">No Item</h1>
+
+        <!-- each cart Container -->
+        <div id="eachCartItemContainer"></div>
+
+        <di id="totalPriceContainer">
+            <p>Total Price <span id="totalPrice"></span>$</p>
+        </di>
+    </div>
+
+  
+</body>
+</html>
